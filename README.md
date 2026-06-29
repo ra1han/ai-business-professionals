@@ -22,13 +22,16 @@ No technical or programming background is required. Each topic can be studied in
 ### Key Areas and Video Links
 
 - **What Artificial Intelligence is**
-  - [SIMPLEST Explanation of How Artificial Intelligence Works? No Jargon | What is AI? How AI works?](https://www.youtube.com/watch?v=m8o2GrbR3d8)
-  - [What Is AI? | Artificial Intelligence | What is Artificial Intelligence? | AI In 5 Mins |Simplilearn](https://www.youtube.com/watch?v=ad79nYk2keg)
+  - [SIMPLEST Explanation of How Artificial Intelligence Works? No Jargon \| What is AI? How AI works?](https://www.youtube.com/watch?v=m8o2GrbR3d8)
+  - [What Is AI? \| Artificial Intelligence \| What is Artificial Intelligence? \| AI In 5 Mins \|Simplilearn](https://www.youtube.com/watch?v=ad79nYk2keg)
+- **Machine Learning vs Generative AI**
+  - [AI, Machine Learning, Deep Learning and Generative AI Explained](https://www.youtube.com/watch?v=qYNweeDHiyU)
+  - [AI vs Machine Learning](https://www.youtube.com/watch?v=4RixMPF4xis)
 - **Large Language Models (LLMs)**
   - [How Large Language Models Work](https://www.youtube.com/watch?v=5sLYAQS9sWQ)
   - [Large Language Models explained briefly](https://www.youtube.com/watch?v=LPZh9BOjkQs)
 - **How ChatGPT and similar AI assistants work**
-  - [How ChatGPT Works? | Working of ChatGPT in 6 Minutes | ChatGPT For Beginners | Simplilearn](https://www.youtube.com/watch?v=4qGrteTY1EM)
+  - [How ChatGPT Works? \| Working of ChatGPT in 6 Minutes \| ChatGPT For Beginners \| Simplilearn](https://www.youtube.com/watch?v=4qGrteTY1EM)
   - [How Does ChatGPT Work? (Explained Simply)](https://www.youtube.com/watch?v=yvsSK0H2lhw)
 - **Tokens and context windows**
   - [What is a Context Window? Unlocking LLM Secrets](https://www.youtube.com/watch?v=-QVoIxEpFkM)
@@ -41,7 +44,7 @@ No technical or programming background is required. Each topic can be studied in
   - [AI Hallucinations Explained Why ChatGPT & Others Make Things Up](https://www.youtube.com/watch?v=XmfNbaoeKl8)
 - **Responsible AI usage**
   - [What is AI Ethics?](https://www.youtube.com/watch?v=aGwYtUzMQUk)
-  - [AI Ethics | Ethics Defined](https://www.youtube.com/watch?v=6yDr7CWLJ8c)
+  - [AI Ethics \| Ethics Defined](https://www.youtube.com/watch?v=6yDr7CWLJ8c)
 
 ### Practice Activities
 
@@ -63,14 +66,14 @@ No technical or programming background is required. Each topic can be studied in
   - [Chain-of-thought prompting - Explained!](https://www.youtube.com/watch?v=AFE6x81AP4k)
   - [What Is Chain-of-Thought Prompting in Generative AI?](https://www.youtube.com/watch?v=Fp-ue4UCE3s)
 - **Few-shot prompting**
-  - [Zero-shot, One-shot and Few-shot Prompting Explained | Prompt Engineering 101](https://www.youtube.com/watch?v=sW5xoicq5TY)
-  - [Discover Few-Shot Prompting | Google AI Essentials](https://www.youtube.com/watch?v=9qdgEBVkWR4)
+  - [Zero-shot, One-shot and Few-shot Prompting Explained \| Prompt Engineering 101](https://www.youtube.com/watch?v=sW5xoicq5TY)
+  - [Discover Few-Shot Prompting \| Google AI Essentials](https://www.youtube.com/watch?v=9qdgEBVkWR4)
 - **Prompt refinement**
   - [Iterative Prompting in ChatGPT: How to Refine Prompts & Improve Responses](https://www.youtube.com/watch?v=i5eiw-_S-3I)
   - [Master the Perfect ChatGPT Prompt Formula (in just 8 minutes)!](https://www.youtube.com/watch?v=jC4v5AS4RIM)
 - **Structured outputs**
   - [Getting Structured Output in JSON format](https://www.youtube.com/watch?v=CllLqPwCjD4)
-  - [3.2 | Programmatic Structured Outputs: JSON | Prompt Engineering Foundation](https://www.youtube.com/watch?v=D2Is4ojfWtE)
+  - [3.2 \| Programmatic Structured Outputs: JSON \| Prompt Engineering Foundation](https://www.youtube.com/watch?v=D2Is4ojfWtE)
 - **Prompt libraries**
   - [Why You Need an AI Prompt Library Now & How to Build One](https://www.youtube.com/watch?v=f3IeLIT_HRc)
   - [How to Build a Prompts Database in Notion (template included)!](https://www.youtube.com/watch?v=Oo_GGWV9Hys)
@@ -122,7 +125,7 @@ No technical or programming background is required. Each topic can be studied in
   - [Master the Perfect ChatGPT Prompt Formula (in just 8 minutes)!](https://www.youtube.com/watch?v=jC4v5AS4RIM)
 - **Business proposals**
   - [How to Write a Business Proposal with ChatGPT (Examples + Template)](https://www.youtube.com/watch?v=_kqMPJpyYhM)
-  - [How to write a Business proposal in 3 minutes with AI | Pages in Team-GPT](https://www.youtube.com/watch?v=sqalloxyR3E)
+  - [How to write a Business proposal in 3 minutes with AI \| Pages in Team-GPT](https://www.youtube.com/watch?v=sqalloxyR3E)
 - **Standard operating procedures (SOPs)**
   - [How to Write SOPs With AI that ACTUALLY Work](https://www.youtube.com/watch?v=xPAQEEYzOH0)
   - [How to Write an SOP in 9 Minutes (Standard Operating Procedure)](https://www.youtube.com/watch?v=PZIbtQVlUnA)
@@ -130,7 +133,7 @@ No technical or programming background is required. Each topic can be studied in
   - [Seriously, watch this before you use AI to write emails](https://www.youtube.com/watch?v=EcZoIReAoig)
   - [Automate your customer service emails with Salesforce Einstein AI](https://www.youtube.com/watch?v=dH1swVLsqdw)
 - **Internal communication**
-  - [AI for Internal Comms: What's Actually Happening | Joanna Parsons Masterclass](https://www.youtube.com/watch?v=ln7UdHqsX4A)
+  - [AI for Internal Comms: What's Actually Happening \| Joanna Parsons Masterclass](https://www.youtube.com/watch?v=ln7UdHqsX4A)
   - [What Is An AI Chatbot For Internal Comms? - Emerging Tech Insider](https://www.youtube.com/watch?v=9M9-1AHkTss)
 
 ### Practice Activities
@@ -144,7 +147,7 @@ No technical or programming background is required. Each topic can be studied in
 ### Key Areas and Video Links
 
 - **Presentation storytelling**
-  - [The magical science of storytelling | David JP Phillips | TEDxStockholm](https://www.youtube.com/watch?v=Nj-hdQMa3uA)
+  - [The magical science of storytelling \| David JP Phillips \| TEDxStockholm](https://www.youtube.com/watch?v=Nj-hdQMa3uA)
   - [Telling Stories with Data in 3 Steps (Quick Study)](https://www.youtube.com/watch?v=r5_34YnCmMY)
 - **Slide design**
   - [The Do's and Don'ts of Effective Presentation Slides](https://www.youtube.com/watch?v=tEF2vNP3S9A)
@@ -176,7 +179,7 @@ No technical or programming background is required. Each topic can be studied in
   - [How To Do Market Research Using AI - ( Skip Focus Groups & Surveys )](https://www.youtube.com/watch?v=wch27po2fs8)
   - [AI Market Research in Under 5 Minutes](https://www.youtube.com/watch?v=uiMiSBKYpps)
 - **Competitor analysis**
-  - [AI-Powered Competitor Analysis in Minutes! | Automate Market Research with AI](https://www.youtube.com/watch?v=woekoobE9fU)
+  - [AI-Powered Competitor Analysis in Minutes! \| Automate Market Research with AI](https://www.youtube.com/watch?v=woekoobE9fU)
   - [How I Use Perplexity AI to Research Competitors in Minutes](https://www.youtube.com/watch?v=Ffli1N7rQpw)
 - **Industry trends**
   - [Secret AI Hack for Rapid Market Research (Prompts Included!)](https://www.youtube.com/watch?v=7dQmjRjP6Fc)
@@ -214,20 +217,20 @@ No technical or programming background is required. Each topic can be studied in
   - [How Copilot Cleans Messy Excel Data Fast!](https://www.youtube.com/watch?v=VqigWcMEjRU)
   - [Clean Data with Copilot in Excel – What Works and What Doesn’t? Episode 2673](https://www.youtube.com/watch?v=swvBTKHPigI)
 - **Pivot tables**
-  - [Pivot Table Excel | Step-by-Step Tutorial](https://www.youtube.com/watch?v=dvbLrwD2SpA)
+  - [Pivot Table Excel \| Step-by-Step Tutorial](https://www.youtube.com/watch?v=dvbLrwD2SpA)
   - [Excel PivotTables for Beginners (2026)](https://www.youtube.com/watch?v=Vj8SNnat2FA)
 - **Charts**
   - [Excel Charts and Graphs Tutorial](https://www.youtube.com/watch?v=eHtZrIb0oWY)
   - [Excel Quick and Simple Charts Tutorial](https://www.youtube.com/watch?v=TfkNkrKMF5c)
 - **Business KPIs**
   - [What is a KPI? (KPI MEANING + KPI EXAMPLES)](https://www.youtube.com/watch?v=gUU_J6m1Heo)
-  - [What are KPIs and Metrics? | Data Fundamental for Beginners](https://www.youtube.com/watch?v=ItZlTixh6Bs)
+  - [What are KPIs and Metrics? \| Data Fundamental for Beginners](https://www.youtube.com/watch?v=ItZlTixh6Bs)
 - **Forecasting basics**
   - [Forecasting in Excel Made SIMPLE (include seasonality & make predictions)](https://www.youtube.com/watch?v=j22tLUQQDh4)
   - [Forecasting in Excel: MUST-KNOW for Any Analyst](https://www.youtube.com/watch?v=6rqhMnOgQnU)
 - **Financial calculations**
   - [Excel for Finance: 10 Formulas You NEED to KNOW](https://www.youtube.com/watch?v=n0SEmyAwIM8)
-  - [VLOOKUP in Excel | Step-by-Step Tutorial for Beginners](https://www.youtube.com/watch?v=xIynD1gFOLo)
+  - [VLOOKUP in Excel \| Step-by-Step Tutorial for Beginners](https://www.youtube.com/watch?v=xIynD1gFOLo)
 
 ### Practice Activities
 
@@ -240,25 +243,25 @@ No technical or programming background is required. Each topic can be studied in
 ### Key Areas and Video Links
 
 - **Meeting preparation**
-  - [Let Gemini Take Your Meeting Notes and Regain Focus | Make AI Work for You | Google](https://www.youtube.com/watch?v=GNRvp5dtGX4)
+  - [Let Gemini Take Your Meeting Notes and Regain Focus \| Make AI Work for You \| Google](https://www.youtube.com/watch?v=GNRvp5dtGX4)
   - [AI Meeting Note-Takers? Which One is The Best?](https://www.youtube.com/watch?v=caolZADZUf0)
 - **Agenda creation**
-  - [How to Create a Meeting Agenda in Seconds with AI | Remova Enterprise AI](https://www.youtube.com/watch?v=9vTS6pOomOw)
+  - [How to Create a Meeting Agenda in Seconds with AI \| Remova Enterprise AI](https://www.youtube.com/watch?v=9vTS6pOomOw)
   - [How to Create a Meeting Agenda with AI?](https://www.youtube.com/watch?v=Bdw8DwGz_mI)
 - **Meeting summaries**
   - [How to Automate Meeting Notes in Microsoft Teams with AI!](https://www.youtube.com/watch?v=9uEH72FMyJU)
-  - [AI Simplified | Unlock meeting insights with intelligent meeting recap in Teams](https://www.youtube.com/watch?v=uaoa-N0zsVQ)
+  - [AI Simplified \| Unlock meeting insights with intelligent meeting recap in Teams](https://www.youtube.com/watch?v=uaoa-N0zsVQ)
 - **Action items**
   - [How to Turn Meeting Transcripts into Action Items Using Gemini AI](https://www.youtube.com/watch?v=ZzF_3G0V4r0)
   - [How to Turn AI Meeting Action Items Into Real Tasks Automatically](https://www.youtube.com/watch?v=FmA_-85phyo)
 - **Project planning**
   - [AI Tools for Project Management: Top 10 Ways to Boost Results](https://www.youtube.com/watch?v=tLabykkGbEw)
-  - [Project Management with AI | Build AI Powered Project Management Tools | PMP with AI | Simplilearn](https://www.youtube.com/watch?v=lADZ6Pxy9m8)
+  - [Project Management with AI \| Build AI Powered Project Management Tools \| PMP with AI \| Simplilearn](https://www.youtube.com/watch?v=lADZ6Pxy9m8)
 - **Time management**
   - [Sam Altman's Productivity System: Start Using It Today (Fast & Simple)](https://www.youtube.com/watch?v=UhdowFCwuGo)
-  - [Maximize Productivity With These Time Management Tools | Dr. Cal Newport & Dr. Andrew Huberman](https://www.youtube.com/watch?v=T4dser6ssp0)
+  - [Maximize Productivity With These Time Management Tools \| Dr. Cal Newport & Dr. Andrew Huberman](https://www.youtube.com/watch?v=T4dser6ssp0)
 - **Task prioritization**
-  - [How to Prioritize Tasks at Work | ABCDE Prioritization Technique](https://www.youtube.com/watch?v=uO__4Lf-KuI)
+  - [How to Prioritize Tasks at Work \| ABCDE Prioritization Technique](https://www.youtube.com/watch?v=uO__4Lf-KuI)
   - [How to Prioritize Tasks Effectively: GET THINGS DONE ✔](https://www.youtube.com/watch?v=czh4rmk75jc)
 - **Microsoft Copilot, ChatGPT, Fireflies, and Notion AI for meetings**
   - [How to Automate Meeting Notes in Microsoft Teams with AI!](https://www.youtube.com/watch?v=9uEH72FMyJU)
@@ -275,7 +278,7 @@ No technical or programming background is required. Each topic can be studied in
 ### Key Areas and Video Links
 
 - **Marketing: content generation, campaign ideas, and customer personas**
-  - [What Will Happen to Marketing in the Age of AI? | Jessica Apotheker | TED](https://www.youtube.com/watch?v=3MwMII8n1qM)
+  - [What Will Happen to Marketing in the Age of AI? \| Jessica Apotheker \| TED](https://www.youtube.com/watch?v=3MwMII8n1qM)
   - [How to Make AI Personas for Marketing](https://www.youtube.com/watch?v=QluCtdQcU1U)
 - **Human Resources: job descriptions, interview questions, performance reviews, and employee communication**
   - [AI in HR: What You Need to Know (2025)](https://www.youtube.com/watch?v=zsHXK1Y57yE)
@@ -304,7 +307,7 @@ No technical or programming background is required. Each topic can be studied in
   - [Tailor Your Resume in Under 3 Minutes Using ChatGPT (Step-by-Step)](https://www.youtube.com/watch?v=DU5BGSS4Ugg)
   - [Introducing Jobsuit: The Easiest Way to Tailor Your Resume & Get Hired Faster](https://www.youtube.com/watch?v=GhzEjXF4OM0)
 - **ATS optimization**
-  - ["Beat the ATS"? They Lied | Ex-Google Recruiter Reveals the Resume Truth](https://www.youtube.com/watch?v=nUlomY7RsIg)
+  - ["Beat the ATS"? They Lied \| Ex-Google Recruiter Reveals the Resume Truth](https://www.youtube.com/watch?v=nUlomY7RsIg)
   - [How to beat the applicant tracking system in 2023 (UPDATED)](https://www.youtube.com/watch?v=qW2YwaMbhxg)
 - **Personalized cover letters**
   - [Write a Cover Letter in SECONDS with Chat GPT 🤯](https://www.youtube.com/watch?v=LCR72RnYat8)
@@ -316,7 +319,7 @@ No technical or programming background is required. Each topic can be studied in
   - [Using AI to Research Companies Before an Interview](https://www.youtube.com/watch?v=drokzcSlej4)
   - [How to Analyze a Company Like an Insider Using AI](https://www.youtube.com/watch?v=UfyfzgpM_BU)
 - **Interview question generation**
-  - [AI Interview Preparation: Master Every Job Interview with ChatGPT & Claude | Day 24](https://www.youtube.com/watch?v=BSn5jdWhoGs)
+  - [AI Interview Preparation: Master Every Job Interview with ChatGPT & Claude \| Day 24](https://www.youtube.com/watch?v=BSn5jdWhoGs)
   - [7 ChatGPT Job Interview Prompts To Land Any Job](https://www.youtube.com/watch?v=tmJdy5F6L8Q)
 - **Behavioral interview practice**
   - [BEHAVIOURAL Interview Questions & Answers! (The STAR Technique for Behavioral Interview Questions!)](https://www.youtube.com/watch?v=2uM7gYuOvr4)
@@ -325,14 +328,14 @@ No technical or programming background is required. Each topic can be studied in
   - [STAR INTERVIEW QUESTIONS & ANSWERS! (The STAR TECHNIQUE for Behavioural Interview Questions!)](https://www.youtube.com/watch?v=uQEuo7woEEk)
   - [Answering Behavioral Interview Questions Using the STAR Method](https://www.youtube.com/watch?v=ZSSID5mp93o)
 - **Salary negotiation practice**
-  - [How to Negotiate Salary after Job Offer | 5 Practical Tips](https://www.youtube.com/watch?v=J30wmYgzVXM)
-  - [How to Negotiate Salary After Job Offer | Show Your Value in a Counteroffer](https://www.youtube.com/watch?v=SjvS20YqUJ4)
+  - [How to Negotiate Salary after Job Offer \| 5 Practical Tips](https://www.youtube.com/watch?v=J30wmYgzVXM)
+  - [How to Negotiate Salary After Job Offer \| Show Your Value in a Counteroffer](https://www.youtube.com/watch?v=SjvS20YqUJ4)
 - **Follow-up email generation**
   - [INTERVIEW FOLLOW-UP EMAIL! (How to FOLLOW UP after a JOB INTERVIEW) EMAIL TEMPLATES INCLUDED!](https://www.youtube.com/watch?v=EJWP7cNhZ2E)
   - [Write a PERFECT Interview Thank You Email!](https://www.youtube.com/watch?v=gSbV3q_MMbg)
 - **Career planning and skill-gap analysis**
-  - [How to Build a Capability Framework with AI: Skills Gap Analysis & Learning Pathways | ELMO](https://www.youtube.com/watch?v=gtE553w5q7E)
-  - [Career Advisor Platform | AI-Powered Career Guidance Website 2025 | Full Demo & Walkthrough](https://www.youtube.com/watch?v=HPm8XAFCxAU)
+  - [How to Build a Capability Framework with AI: Skills Gap Analysis & Learning Pathways \| ELMO](https://www.youtube.com/watch?v=gtE553w5q7E)
+  - [Career Advisor Platform \| AI-Powered Career Guidance Website 2025 \| Full Demo & Walkthrough](https://www.youtube.com/watch?v=HPm8XAFCxAU)
 
 ### Practice Activities
 
