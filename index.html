@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI for Business Professionals</title>
+<meta name="description" content="A self-learning roadmap for business professionals who want to use Generative AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f172a; --bg-soft:#1e293b; --sidebar:#111827; --accent:#6366f1; --accent-2:#22d3ee;
+  --text:#e2e8f0; --muted:#94a3b8; --card:#1e293b; --border:#334155; --link:#818cf8;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;}
+a{color:var(--link);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* Layout */
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border);
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 18px;}
+.brand{font-weight:700;font-size:1.15rem;margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+.brand-sub{color:var(--muted);font-size:.8rem;margin:0 0 18px;}
+.search{width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border);
+  background:var(--bg-soft);color:var(--text);font-size:.85rem;margin-bottom:16px;}
+.search::placeholder{color:var(--muted);}
+.nav-section{margin-bottom:18px;}
+.nav-heading{text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;color:var(--muted);
+  font-weight:600;margin:0 0 8px 6px;}
+.sidebar ul{list-style:none;margin:0;padding:0;}
+.sidebar li a{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;
+  color:var(--muted);font-size:.88rem;font-weight:500;transition:.15s;}
+.sidebar li a:hover{background:var(--bg-soft);color:var(--text);text-decoration:none;}
+.sidebar li a.active{background:linear-gradient(135deg,rgba(99,102,241,.18),rgba(34,211,238,.12));
+  color:#fff;border-left:0;}
+.sidebar .num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;
+  border-radius:6px;background:var(--bg-soft);color:var(--accent-2);font-size:.72rem;font-weight:700;flex-shrink:0;}
+.sidebar li a.active .num{background:var(--accent);color:#fff;}
+
+/* Content */
+.content{flex:1;min-width:0;}
+.hero{padding:64px 48px 40px;background:radial-gradient(1200px 400px at 20% -10%,rgba(99,102,241,.25),transparent),
+  radial-gradient(900px 400px at 90% 0%,rgba(34,211,238,.18),transparent);border-bottom:1px solid var(--border);}
+.hero h1{font-size:2.4rem;margin:0 0 12px;line-height:1.15;background:linear-gradient(135deg,#fff,#c7d2fe);
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p{color:var(--muted);max-width:760px;font-size:1.05rem;margin:0;}
+.hero .badges{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;}
+.badge{background:var(--bg-soft);border:1px solid var(--border);padding:5px 12px;border-radius:999px;
+  font-size:.78rem;color:var(--muted);}
+.article{padding:8px 48px 80px;max-width:920px;}
+
+/* Markdown elements */
+.article h1{display:none;} /* hide duplicate top title from README */
+.article > p:first-of-type, .article > p:nth-of-type(2){display:none;} /* intro shown in hero */
+.article h2{font-size:1.55rem;margin:48px 0 6px;padding-top:14px;scroll-margin-top:20px;
+  display:flex;align-items:center;gap:10px;}
+.article h2::before{content:"";width:6px;height:26px;border-radius:4px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-2));}
+.article h3{font-size:1.05rem;color:var(--accent-2);margin:26px 0 10px;text-transform:uppercase;
+  letter-spacing:.05em;font-weight:600;}
+.article ul{padding-left:0;list-style:none;}
+.article > ul > li, .article h3 + ul > li{margin:10px 0;}
+/* top-level key-area items become cards */
+.article h3 + ul > li{background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:14px 18px;transition:.15s;}
+.article h3 + ul > li:hover{border-color:var(--accent);transform:translateY(-1px);}
+.article h3 + ul > li > strong{color:#fff;font-size:1rem;display:block;margin-bottom:8px;}
+.article ul ul{margin:6px 0 0;padding-left:0;}
+.article ul ul li{margin:5px 0;padding-left:22px;position:relative;color:var(--text);}
+.article ul ul li::before{content:"▶";position:absolute;left:0;color:var(--accent);font-size:.65rem;top:.45em;}
+.article ul ul li a{color:var(--link);}
+/* plain bullet lists (practice activities, prerequisites) */
+.article > ul > li{padding-left:22px;position:relative;}
+.article > ul > li::before{content:"✓";position:absolute;left:0;color:var(--accent-2);font-weight:700;}
+.back-top{position:fixed;bottom:24px;right:24px;background:var(--accent);color:#fff;width:44px;height:44px;
+  border-radius:50%;display:none;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);border:none;z-index:50;}
+.back-top.show{display:flex;}
+
+/* Mobile */
+.menu-toggle{display:none;}
+@media(max-width:920px){
+  .menu-toggle{display:flex;position:fixed;top:14px;left:14px;z-index:60;background:var(--sidebar);
+    border:1px solid var(--border);color:#fff;width:42px;height:42px;border-radius:10px;
+    align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;}
+  .sidebar{position:fixed;left:0;top:0;z-index:55;transform:translateX(-100%);transition:.25s;box-shadow:0 0 40px rgba(0,0,0,.6);}
+  .sidebar.open{transform:translateX(0);}
+  .hero{padding:72px 22px 32px;} .hero h1{font-size:1.8rem;}
+  .article{padding:8px 22px 70px;}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:54;}
+  .overlay.show{display:block;}
+}
+</style>
+</head>
+<body>
+<button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+<div class="overlay"></div>
+<div class="layout">
+  <aside class="sidebar">
+    <p class="brand"><span class="dot"></span> AI for Business</p>
+    <p class="brand-sub">Generative AI learning roadmap</p>
+    <input type="search" class="search" placeholder="Filter topics...">
+    <nav>
+  <div class="nav-section">
+    <p class="nav-heading">Overview</p>
+    <ul><li><a href="#how-to-use-this-roadmap" data-target="how-to-use-this-roadmap">How to Use This Roadmap</a></li><li><a href="#prerequisites" data-target="prerequisites">Prerequisites</a></li></ul>
+  </div>
+  <div class="nav-section">
+    <p class="nav-heading">Topics</p>
+    <ul><li><a href="#topic-1-introduction-to-ai-and-generative-ai" data-target="topic-1-introduction-to-ai-and-generative-ai"><span class="num">1</span> Introduction to AI and Generative AI</a></li><li><a href="#topic-2-prompt-engineering-for-business-professionals" data-target="topic-2-prompt-engineering-for-business-professionals"><span class="num">2</span> Prompt Engineering for Business Professionals</a></li><li><a href="#topic-3-popular-ai-tools-for-business" data-target="topic-3-popular-ai-tools-for-business"><span class="num">3</span> Popular AI Tools for Business</a></li><li><a href="#topic-4-ai-for-business-communication" data-target="topic-4-ai-for-business-communication"><span class="num">4</span> AI for Business Communication</a></li><li><a href="#topic-5-ai-for-presentations" data-target="topic-5-ai-for-presentations"><span class="num">5</span> AI for Presentations</a></li><li><a href="#topic-6-ai-for-research-and-decision-making" data-target="topic-6-ai-for-research-and-decision-making"><span class="num">6</span> AI for Research and Decision Making</a></li><li><a href="#topic-7-ai-for-data-analysis-and-business-calculations" data-target="topic-7-ai-for-data-analysis-and-business-calculations"><span class="num">7</span> AI for Data Analysis and Business Calculations</a></li><li><a href="#topic-8-ai-for-productivity-and-meetings" data-target="topic-8-ai-for-productivity-and-meetings"><span class="num">8</span> AI for Productivity and Meetings</a></li><li><a href="#topic-9-ai-across-business-functions" data-target="topic-9-ai-across-business-functions"><span class="num">9</span> AI Across Business Functions</a></li><li><a href="#topic-10-ai-for-career-growth-and-job-interview-preparation" data-target="topic-10-ai-for-career-growth-and-job-interview-preparation"><span class="num">10</span> AI for Career Growth and Job Interview Preparation</a></li></ul>
+  </div>
+  <div class="nav-section">
+    <p class="nav-heading">More</p>
+    <ul><li><a href="#final-self-learning-project" data-target="final-self-learning-project">Final Self-Learning Project</a></li><li><a href="#recommended-software" data-target="recommended-software">Recommended Software</a></li></ul>
+  </div>
+</nav>
+  </aside>
+  <div class="content">
+    <header class="hero">
+      <h1>AI for Business Professionals</h1>
+      <p>A self-learning roadmap to use Generative AI for productivity, decision-making, communication, research, analysis, and career growth. No technical background required.</p>
+      <div class="badges">
+        <span class="badge">10 Topics</span>
+        <span class="badge">Curated video links</span>
+        <span class="badge">Hands-on activities</span>
+        <span class="badge">Beginner friendly</span>
+      </div>
+    </header>
+    <article class="article">
+      <h1 id="ai-for-business-professionals">AI for Business Professionals</h1>
+<p>A self-learning roadmap for business professionals who want to use Generative AI to improve productivity, decision-making, communication, research, analysis, and career growth.</p>
+<p>No technical or programming background is required. Each topic can be studied independently, and YouTube video links can be added for each subtopic.</p>
+<h2 id="how-to-use-this-roadmap">How to Use This Roadmap</h2>
+<ul>
+<li>Start with the foundation topics if you are new to AI.</li>
+<li>Watch the YouTube videos listed for each subtopic.</li>
+<li>Practice with the suggested activities after each topic.</li>
+<li>Build a small portfolio of AI-assisted business outputs as you progress.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Basic computer literacy</li>
+<li>Familiarity with Microsoft Office or Google Workspace</li>
+<li>Access to one or more AI tools, such as ChatGPT, Microsoft Copilot, Gemini, Claude, or Perplexity</li>
+</ul>
+<h2 id="topic-1-introduction-to-ai-and-generative-ai">Topic 1: Introduction to AI and Generative AI</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>What Artificial Intelligence is</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=m8o2GrbR3d8" target="_blank" rel="noopener">SIMPLEST Explanation of How Artificial Intelligence Works? No Jargon | What is AI? How AI works?</a></li>
+<li><a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" rel="noopener">What Is AI? | Artificial Intelligence | What is Artificial Intelligence? | AI In 5 Mins |Simplilearn</a></li>
+</ul>
+</li>
+<li><strong>Machine Learning vs Generative AI</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=qYNweeDHiyU" target="_blank" rel="noopener">AI, Machine Learning, Deep Learning and Generative AI Explained</a></li>
+<li><a href="https://www.youtube.com/watch?v=4RixMPF4xis" target="_blank" rel="noopener">AI vs Machine Learning</a></li>
+</ul>
+</li>
+<li><strong>Large Language Models (LLMs)</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=5sLYAQS9sWQ" target="_blank" rel="noopener">How Large Language Models Work</a></li>
+<li><a href="https://www.youtube.com/watch?v=LPZh9BOjkQs" target="_blank" rel="noopener">Large Language Models explained briefly</a></li>
+</ul>
+</li>
+<li><strong>How ChatGPT and similar AI assistants work</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=4qGrteTY1EM" target="_blank" rel="noopener">How ChatGPT Works? | Working of ChatGPT in 6 Minutes | ChatGPT For Beginners | Simplilearn</a></li>
+<li><a href="https://www.youtube.com/watch?v=yvsSK0H2lhw" target="_blank" rel="noopener">How Does ChatGPT Work? (Explained Simply)</a></li>
+</ul>
+</li>
+<li><strong>Tokens and context windows</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=-QVoIxEpFkM" target="_blank" rel="noopener">What is a Context Window? Unlocking LLM Secrets</a></li>
+<li><a href="https://www.youtube.com/watch?v=TeQDr4DkLYo" target="_blank" rel="noopener">Why LLMs get dumb (Context Windows Explained)</a></li>
+</ul>
+</li>
+<li><strong>Strengths and limitations of AI</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=Fzm1xqBmJa0" target="_blank" rel="noopener">What are the strengths and limitations of generative AI?</a></li>
+<li><a href="https://www.youtube.com/watch?v=7HaNeHe_R2U" target="_blank" rel="noopener">Generative AI Strengths &amp; Limitations</a></li>
+</ul>
+</li>
+<li><strong>Hallucinations and AI reliability</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=cfqtFvWOfg0" target="_blank" rel="noopener">Why Large Language Models Hallucinate</a></li>
+<li><a href="https://www.youtube.com/watch?v=XmfNbaoeKl8" target="_blank" rel="noopener">AI Hallucinations Explained Why ChatGPT &amp; Others Make Things Up</a></li>
+</ul>
+</li>
+<li><strong>Responsible AI usage</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=aGwYtUzMQUk" target="_blank" rel="noopener">What is AI Ethics?</a></li>
+<li><a href="https://www.youtube.com/watch?v=6yDr7CWLJ8c" target="_blank" rel="noopener">AI Ethics | Ethics Defined</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Ask an AI assistant to explain AI in simple business language.</li>
+<li>Summarize a short article using AI.</li>
+<li>Brainstorm three ways AI could improve your daily work.</li>
+</ul>
+<h2 id="topic-2-prompt-engineering-for-business-professionals">Topic 2: Prompt Engineering for Business Professionals</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Anatomy of a good prompt</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=aeJ5fNFexhc" target="_blank" rel="noopener">CARE: Structure for Crafting AI Prompts</a></li>
+<li><a href="https://www.youtube.com/watch?v=p09yRj47kNM" target="_blank" rel="noopener">Google&#39;s 9 Hour AI Prompt Engineering Course In 20 Minutes</a></li>
+</ul>
+</li>
+<li><strong>Context and role prompting</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=vD0E3EUb8-8" target="_blank" rel="noopener">Context Engineering vs. Prompt Engineering: Smarter AI with RAG &amp; Agents</a></li>
+<li><a href="https://www.youtube.com/watch?v=jC4v5AS4RIM" target="_blank" rel="noopener">Master the Perfect ChatGPT Prompt Formula (in just 8 minutes)!</a></li>
+</ul>
+</li>
+<li><strong>Chain of thought as a planning concept</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=AFE6x81AP4k" target="_blank" rel="noopener">Chain-of-thought prompting - Explained!</a></li>
+<li><a href="https://www.youtube.com/watch?v=Fp-ue4UCE3s" target="_blank" rel="noopener">What Is Chain-of-Thought Prompting in Generative AI?</a></li>
+</ul>
+</li>
+<li><strong>Few-shot prompting</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=sW5xoicq5TY" target="_blank" rel="noopener">Zero-shot, One-shot and Few-shot Prompting Explained | Prompt Engineering 101</a></li>
+<li><a href="https://www.youtube.com/watch?v=9qdgEBVkWR4" target="_blank" rel="noopener">Discover Few-Shot Prompting | Google AI Essentials</a></li>
+</ul>
+</li>
+<li><strong>Prompt refinement</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=i5eiw-_S-3I" target="_blank" rel="noopener">Iterative Prompting in ChatGPT: How to Refine Prompts &amp; Improve Responses</a></li>
+<li><a href="https://www.youtube.com/watch?v=jC4v5AS4RIM" target="_blank" rel="noopener">Master the Perfect ChatGPT Prompt Formula (in just 8 minutes)!</a></li>
+</ul>
+</li>
+<li><strong>Structured outputs</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=CllLqPwCjD4" target="_blank" rel="noopener">Getting Structured Output in JSON format</a></li>
+<li><a href="https://www.youtube.com/watch?v=D2Is4ojfWtE" target="_blank" rel="noopener">3.2 | Programmatic Structured Outputs: JSON | Prompt Engineering Foundation</a></li>
+</ul>
+</li>
+<li><strong>Prompt libraries</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=f3IeLIT_HRc" target="_blank" rel="noopener">Why You Need an AI Prompt Library Now &amp; How to Build One</a></li>
+<li><a href="https://www.youtube.com/watch?v=Oo_GGWV9Hys" target="_blank" rel="noopener">How to Build a Prompts Database in Notion (template included)!</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Draft a professional email using AI.</li>
+<li>Rewrite the same message for different audiences.</li>
+<li>Build a reusable prompt library for your job.</li>
+</ul>
+<h2 id="topic-3-popular-ai-tools-for-business">Topic 3: Popular AI Tools for Business</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>AI assistants: ChatGPT, Claude, Gemini, and Microsoft Copilot</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=JA3o63i-Xow" target="_blank" rel="noopener">ChatGPT vs Copilot vs Gemini vs Claude</a></li>
+<li><a href="https://www.youtube.com/watch?v=dAaBoeDN54g" target="_blank" rel="noopener">The Best AI for Small Business (Gemini vs Claude vs ChatGPT vs Copilot)</a></li>
+</ul>
+</li>
+<li><strong>Research tools: Perplexity and NotebookLM</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=tiM8Bk_pOdg" target="_blank" rel="noopener">This NotebookLM + Perplexity Workflow Will Boost Your Research Output by 90%</a></li>
+<li><a href="https://www.youtube.com/watch?v=b4j96c1wPow" target="_blank" rel="noopener">This NotebookLM + Perplexity Workflow Cuts Your Research Time by 80%</a></li>
+</ul>
+</li>
+<li><strong>Writing and productivity tools: Grammarly AI and Notion AI</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=7dm9bSH20es" target="_blank" rel="noopener">Best AI for Writers? Grammarly vs Notion AI Showdown</a></li>
+<li><a href="https://www.youtube.com/watch?v=Wt9xdFfTd9A" target="_blank" rel="noopener">How to Use Notion AI to Organize Your Entire Life (2026 Tutorial)</a></li>
+</ul>
+</li>
+<li><strong>Presentation tools: Gamma, Canva AI, and PowerPoint Copilot</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=KcbXKUR7-a0" target="_blank" rel="noopener">How to Use Gamma AI (Full Tutorial for Presentations, Websites &amp; More)</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZpXN9M0WLQ4" target="_blank" rel="noopener">The Top 1% Build AI Presentations Differently. Here&#39;s How.</a></li>
+</ul>
+</li>
+<li><strong>Meeting assistants: Otter.ai and Fireflies.ai</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=m6tPBKf1fEY" target="_blank" rel="noopener">Fireflies vs. Otter- Which AI Meeting Assistant is Better?</a></li>
+<li><a href="https://www.youtube.com/watch?v=nIWZRFNwOug" target="_blank" rel="noopener">Fireflies vs Otter - Which AI Meeting Assistant is Better?</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Solve the same business task using two different AI tools.</li>
+<li>Compare the quality, accuracy, speed, and usefulness of the outputs.</li>
+<li>Create a short list of tools that fit your own work style.</li>
+</ul>
+<h2 id="topic-4-ai-for-business-communication">Topic 4: AI for Business Communication</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Professional emails</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=z09udu8klDM" target="_blank" rel="noopener">How to use Chat GPT for Email (Quick Start)</a></li>
+<li><a href="https://www.youtube.com/watch?v=OGtXH8sDW5w" target="_blank" rel="noopener">How To Write Professional Email Messages Using ChatGPT</a></li>
+</ul>
+</li>
+<li><strong>Reports</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=2ZPCpZlUdvM" target="_blank" rel="noopener">How to Generate Reports with ChatGPT</a></li>
+<li><a href="https://www.youtube.com/watch?v=QM07W6MzuKE" target="_blank" rel="noopener">How to Create Excel Reports with ChatGPT (Full AI Tutorial)</a></li>
+</ul>
+</li>
+<li><strong>Executive summaries</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=SE-wnHBtP1s" target="_blank" rel="noopener">How to Write an Executive Summary - (Step by Step)</a></li>
+<li><a href="https://www.youtube.com/watch?v=jC4v5AS4RIM" target="_blank" rel="noopener">Master the Perfect ChatGPT Prompt Formula (in just 8 minutes)!</a></li>
+</ul>
+</li>
+<li><strong>Business proposals</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=_kqMPJpyYhM" target="_blank" rel="noopener">How to Write a Business Proposal with ChatGPT (Examples + Template)</a></li>
+<li><a href="https://www.youtube.com/watch?v=sqalloxyR3E" target="_blank" rel="noopener">How to write a Business proposal in 3 minutes with AI | Pages in Team-GPT</a></li>
+</ul>
+</li>
+<li><strong>Standard operating procedures (SOPs)</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=xPAQEEYzOH0" target="_blank" rel="noopener">How to Write SOPs With AI that ACTUALLY Work</a></li>
+<li><a href="https://www.youtube.com/watch?v=PZIbtQVlUnA" target="_blank" rel="noopener">How to Write an SOP in 9 Minutes (Standard Operating Procedure)</a></li>
+</ul>
+</li>
+<li><strong>Customer communication</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=EcZoIReAoig" target="_blank" rel="noopener">Seriously, watch this before you use AI to write emails</a></li>
+<li><a href="https://www.youtube.com/watch?v=dH1swVLsqdw" target="_blank" rel="noopener">Automate your customer service emails with Salesforce Einstein AI</a></li>
+</ul>
+</li>
+<li><strong>Internal communication</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=ln7UdHqsX4A" target="_blank" rel="noopener">AI for Internal Comms: What&#39;s Actually Happening | Joanna Parsons Masterclass</a></li>
+<li><a href="https://www.youtube.com/watch?v=9M9-1AHkTss" target="_blank" rel="noopener">What Is An AI Chatbot For Internal Comms? - Emerging Tech Insider</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Generate a business proposal.</li>
+<li>Create an executive summary from a long document.</li>
+<li>Draft a LinkedIn article or press release.</li>
+</ul>
+<h2 id="topic-5-ai-for-presentations">Topic 5: AI for Presentations</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Presentation storytelling</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=Nj-hdQMa3uA" target="_blank" rel="noopener">The magical science of storytelling | David JP Phillips | TEDxStockholm</a></li>
+<li><a href="https://www.youtube.com/watch?v=r5_34YnCmMY" target="_blank" rel="noopener">Telling Stories with Data in 3 Steps (Quick Study)</a></li>
+</ul>
+</li>
+<li><strong>Slide design</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=tEF2vNP3S9A" target="_blank" rel="noopener">The Do&#39;s and Don&#39;ts of Effective Presentation Slides</a></li>
+<li><a href="https://www.youtube.com/watch?v=xxw5DYTVZSc" target="_blank" rel="noopener">How to Build PowerPoint Slides Like a Graphic Designer</a></li>
+</ul>
+</li>
+<li><strong>Presentation planning</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=PnWND7JpRDQ" target="_blank" rel="noopener">How to Prepare a Presentation with the Correct Structure</a></li>
+<li><a href="https://www.youtube.com/watch?v=4bwDr7WVBwo" target="_blank" rel="noopener">How to Organize a Speech or Presentation</a></li>
+</ul>
+</li>
+<li><strong>Speaker notes</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=MIcWwXuIwuU" target="_blank" rel="noopener">How to Add Speaker Notes in Microsoft PowerPoint</a></li>
+<li><a href="https://www.youtube.com/watch?v=3iwvIk9Zmqo" target="_blank" rel="noopener">Adding and Formatting Speaker Notes to a Presentation in PowerPoint 2021/365</a></li>
+</ul>
+</li>
+<li><strong>Presentation coaching</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=d812a7qG9Kw" target="_blank" rel="noopener">How to Practice a Speech or Presentation</a></li>
+<li><a href="https://www.youtube.com/watch?v=Edg54WnYqkE" target="_blank" rel="noopener">NEVER Feel Anxiety Again When Giving A Speech (5 EASY Methods)</a></li>
+</ul>
+</li>
+<li><strong>Gamma, Canva AI, PowerPoint Copilot, and ChatGPT for presentations</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=Nl2gLi1MD04" target="_blank" rel="noopener">Create AI-Generated Presentations with Canva</a></li>
+<li><a href="https://www.youtube.com/watch?v=mi2vCsP1oKY" target="_blank" rel="noopener">Why 90% of AI Presentations Fail (do this instead)</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Create a professional business presentation from scratch.</li>
+<li>Generate speaker notes for each slide.</li>
+<li>Ask AI to review your presentation for clarity and impact.</li>
+</ul>
+<h2 id="topic-6-ai-for-research-and-decision-making">Topic 6: AI for Research and Decision Making</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Market research</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=wch27po2fs8" target="_blank" rel="noopener">How To Do Market Research Using AI - ( Skip Focus Groups &amp; Surveys )</a></li>
+<li><a href="https://www.youtube.com/watch?v=uiMiSBKYpps" target="_blank" rel="noopener">AI Market Research in Under 5 Minutes</a></li>
+</ul>
+</li>
+<li><strong>Competitor analysis</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=woekoobE9fU" target="_blank" rel="noopener">AI-Powered Competitor Analysis in Minutes! | Automate Market Research with AI</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ffli1N7rQpw" target="_blank" rel="noopener">How I Use Perplexity AI to Research Competitors in Minutes</a></li>
+</ul>
+</li>
+<li><strong>Industry trends</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=7dQmjRjP6Fc" target="_blank" rel="noopener">Secret AI Hack for Rapid Market Research (Prompts Included!)</a></li>
+<li><a href="https://www.youtube.com/watch?v=4fFZE41fdGw" target="_blank" rel="noopener">How AI is helping brands identify consumer trends faster</a></li>
+</ul>
+</li>
+<li><strong>Business intelligence</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=w2SZ0Sh21g4" target="_blank" rel="noopener">How AI is Shaping Business Intelligence in 2026</a></li>
+<li><a href="https://www.youtube.com/watch?v=FwOTs4UxQS4" target="_blank" rel="noopener">AI Agents, Clearly Explained</a></li>
+</ul>
+</li>
+<li><strong>Fact checking</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=Q0l2JUwsU9Q" target="_blank" rel="noopener">How Can You Fact-Check AI-Generated Content? - Emerging Tech Insider</a></li>
+<li><a href="https://www.youtube.com/watch?v=L0X3W1utdRQ" target="_blank" rel="noopener">Fact Check: How to spot AI images?</a></li>
+</ul>
+</li>
+<li><strong>Deep research workflows</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=YoWdogtZRw8" target="_blank" rel="noopener">Learn 80% of Perplexity in under 10 minutes!</a></li>
+<li><a href="https://www.youtube.com/watch?v=nzgrB56LMbI" target="_blank" rel="noopener">How To Use Perplexity AI (Best AI Research Tool)</a></li>
+</ul>
+</li>
+<li><strong>Perplexity, NotebookLM, and ChatGPT Research</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=tiM8Bk_pOdg" target="_blank" rel="noopener">This NotebookLM + Perplexity Workflow Will Boost Your Research Output by 90%</a></li>
+<li><a href="https://www.youtube.com/watch?v=b4j96c1wPow" target="_blank" rel="noopener">This NotebookLM + Perplexity Workflow Cuts Your Research Time by 80%</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Prepare an executive briefing on a selected company.</li>
+<li>Compare two competitors using AI-assisted research.</li>
+<li>Create a fact-checking checklist for AI-generated research.</li>
+</ul>
+<h2 id="topic-7-ai-for-data-analysis-and-business-calculations">Topic 7: AI for Data Analysis and Business Calculations</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>AI with Excel and spreadsheets</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=aKRgmFLR9fI" target="_blank" rel="noopener">3 Easy Ways to Use AI in Excel Tutorial (Beginner)</a></li>
+<li><a href="https://www.youtube.com/watch?v=Rj7yrivdPbc" target="_blank" rel="noopener">Excel Tutorial for Beginners — Learn with Copilot AI (Free Tool!)</a></li>
+</ul>
+</li>
+<li><strong>Spreadsheet formulas</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=3zNcLvvdNeI" target="_blank" rel="noopener">How to Write Excel Formulas with ChatGPT</a></li>
+<li><a href="https://www.youtube.com/watch?v=4vYCdBOqNVA" target="_blank" rel="noopener">Watch ChatGPT Build Excel Spreadsheets In Seconds!</a></li>
+</ul>
+</li>
+<li><strong>Data cleaning</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=VqigWcMEjRU" target="_blank" rel="noopener">How Copilot Cleans Messy Excel Data Fast!</a></li>
+<li><a href="https://www.youtube.com/watch?v=swvBTKHPigI" target="_blank" rel="noopener">Clean Data with Copilot in Excel – What Works and What Doesn’t? Episode 2673</a></li>
+</ul>
+</li>
+<li><strong>Pivot tables</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=dvbLrwD2SpA" target="_blank" rel="noopener">Pivot Table Excel | Step-by-Step Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=Vj8SNnat2FA" target="_blank" rel="noopener">Excel PivotTables for Beginners (2026)</a></li>
+</ul>
+</li>
+<li><strong>Charts</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=eHtZrIb0oWY" target="_blank" rel="noopener">Excel Charts and Graphs Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=TfkNkrKMF5c" target="_blank" rel="noopener">Excel Quick and Simple Charts Tutorial</a></li>
+</ul>
+</li>
+<li><strong>Business KPIs</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=gUU_J6m1Heo" target="_blank" rel="noopener">What is a KPI? (KPI MEANING + KPI EXAMPLES)</a></li>
+<li><a href="https://www.youtube.com/watch?v=ItZlTixh6Bs" target="_blank" rel="noopener">What are KPIs and Metrics? | Data Fundamental for Beginners</a></li>
+</ul>
+</li>
+<li><strong>Forecasting basics</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=j22tLUQQDh4" target="_blank" rel="noopener">Forecasting in Excel Made SIMPLE (include seasonality &amp; make predictions)</a></li>
+<li><a href="https://www.youtube.com/watch?v=6rqhMnOgQnU" target="_blank" rel="noopener">Forecasting in Excel: MUST-KNOW for Any Analyst</a></li>
+</ul>
+</li>
+<li><strong>Financial calculations</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=n0SEmyAwIM8" target="_blank" rel="noopener">Excel for Finance: 10 Formulas You NEED to KNOW</a></li>
+<li><a href="https://www.youtube.com/watch?v=xIynD1gFOLo" target="_blank" rel="noopener">VLOOKUP in Excel | Step-by-Step Tutorial for Beginners</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Generate Excel formulas with AI.</li>
+<li>Analyze a sample sales dataset.</li>
+<li>Create a dashboard outline with KPIs and charts.</li>
+</ul>
+<h2 id="topic-8-ai-for-productivity-and-meetings">Topic 8: AI for Productivity and Meetings</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Meeting preparation</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=GNRvp5dtGX4" target="_blank" rel="noopener">Let Gemini Take Your Meeting Notes and Regain Focus | Make AI Work for You | Google</a></li>
+<li><a href="https://www.youtube.com/watch?v=caolZADZUf0" target="_blank" rel="noopener">AI Meeting Note-Takers? Which One is The Best?</a></li>
+</ul>
+</li>
+<li><strong>Agenda creation</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=9vTS6pOomOw" target="_blank" rel="noopener">How to Create a Meeting Agenda in Seconds with AI | Remova Enterprise AI</a></li>
+<li><a href="https://www.youtube.com/watch?v=Bdw8DwGz_mI" target="_blank" rel="noopener">How to Create a Meeting Agenda with AI?</a></li>
+</ul>
+</li>
+<li><strong>Meeting summaries</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=9uEH72FMyJU" target="_blank" rel="noopener">How to Automate Meeting Notes in Microsoft Teams with AI!</a></li>
+<li><a href="https://www.youtube.com/watch?v=uaoa-N0zsVQ" target="_blank" rel="noopener">AI Simplified | Unlock meeting insights with intelligent meeting recap in Teams</a></li>
+</ul>
+</li>
+<li><strong>Action items</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=ZzF_3G0V4r0" target="_blank" rel="noopener">How to Turn Meeting Transcripts into Action Items Using Gemini AI</a></li>
+<li><a href="https://www.youtube.com/watch?v=FmA_-85phyo" target="_blank" rel="noopener">How to Turn AI Meeting Action Items Into Real Tasks Automatically</a></li>
+</ul>
+</li>
+<li><strong>Project planning</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=tLabykkGbEw" target="_blank" rel="noopener">AI Tools for Project Management: Top 10 Ways to Boost Results</a></li>
+<li><a href="https://www.youtube.com/watch?v=lADZ6Pxy9m8" target="_blank" rel="noopener">Project Management with AI | Build AI Powered Project Management Tools | PMP with AI | Simplilearn</a></li>
+</ul>
+</li>
+<li><strong>Time management</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=UhdowFCwuGo" target="_blank" rel="noopener">Sam Altman&#39;s Productivity System: Start Using It Today (Fast &amp; Simple)</a></li>
+<li><a href="https://www.youtube.com/watch?v=T4dser6ssp0" target="_blank" rel="noopener">Maximize Productivity With These Time Management Tools | Dr. Cal Newport &amp; Dr. Andrew Huberman</a></li>
+</ul>
+</li>
+<li><strong>Task prioritization</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=uO__4Lf-KuI" target="_blank" rel="noopener">How to Prioritize Tasks at Work | ABCDE Prioritization Technique</a></li>
+<li><a href="https://www.youtube.com/watch?v=czh4rmk75jc" target="_blank" rel="noopener">How to Prioritize Tasks Effectively: GET THINGS DONE ✔</a></li>
+</ul>
+</li>
+<li><strong>Microsoft Copilot, ChatGPT, Fireflies, and Notion AI for meetings</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=9uEH72FMyJU" target="_blank" rel="noopener">How to Automate Meeting Notes in Microsoft Teams with AI!</a></li>
+<li><a href="https://www.youtube.com/watch?v=56pilLKRGJc" target="_blank" rel="noopener">How to Use ChatGPT for Meeting Minutes in 2025</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Create a meeting agenda using AI.</li>
+<li>Generate meeting minutes from notes or a transcript.</li>
+<li>Turn meeting action items into a project task list.</li>
+</ul>
+<h2 id="topic-9-ai-across-business-functions">Topic 9: AI Across Business Functions</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Marketing: content generation, campaign ideas, and customer personas</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=3MwMII8n1qM" target="_blank" rel="noopener">What Will Happen to Marketing in the Age of AI? | Jessica Apotheker | TED</a></li>
+<li><a href="https://www.youtube.com/watch?v=QluCtdQcU1U" target="_blank" rel="noopener">How to Make AI Personas for Marketing</a></li>
+</ul>
+</li>
+<li><strong>Human Resources: job descriptions, interview questions, performance reviews, and employee communication</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=zsHXK1Y57yE" target="_blank" rel="noopener">AI in HR: What You Need to Know (2025)</a></li>
+<li><a href="https://www.youtube.com/watch?v=WtSizC0nIoQ" target="_blank" rel="noopener">HR Interview Questions and Answers</a></li>
+</ul>
+</li>
+<li><strong>Finance: budget summaries, financial reports, and risk analysis</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=ui7kRlJMqjM" target="_blank" rel="noopener">MIT Professor on How AI &amp; LLMs are Shaping Financial Advice, Analysis, &amp; Risk Management: Part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=wR_fd1ekkNs" target="_blank" rel="noopener">Best AI Tool for Finance in 2026? (You Only need ONE)</a></li>
+</ul>
+</li>
+<li><strong>Operations: SOP generation, process improvement, and documentation</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=xPAQEEYzOH0" target="_blank" rel="noopener">How to Write SOPs With AI that ACTUALLY Work</a></li>
+<li><a href="https://www.youtube.com/watch?v=7rAferkGvOc" target="_blank" rel="noopener">Business Systemization - TouchStone Training #4: Process Documentation using A.I.</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Choose one business function related to your work.</li>
+<li>Complete an AI-assisted task for that function.</li>
+<li>Review and improve the output manually.</li>
+</ul>
+<h2 id="topic-10-ai-for-career-growth-and-job-interview-preparation">Topic 10: AI for Career Growth and Job Interview Preparation</h2>
+<h3 id="key-areas-and-video-links">Key Areas and Video Links</h3>
+<ul>
+<li><strong>Resume optimization</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=dOgEPkQUH48" target="_blank" rel="noopener">8 ChatGPT Prompts to Level Up Your Resume (tried-and-tested!)</a></li>
+<li><a href="https://www.youtube.com/watch?v=DU5BGSS4Ugg" target="_blank" rel="noopener">Tailor Your Resume in Under 3 Minutes Using ChatGPT (Step-by-Step)</a></li>
+</ul>
+</li>
+<li><strong>Tailoring resumes for different job descriptions</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=DU5BGSS4Ugg" target="_blank" rel="noopener">Tailor Your Resume in Under 3 Minutes Using ChatGPT (Step-by-Step)</a></li>
+<li><a href="https://www.youtube.com/watch?v=GhzEjXF4OM0" target="_blank" rel="noopener">Introducing Jobsuit: The Easiest Way to Tailor Your Resume &amp; Get Hired Faster</a></li>
+</ul>
+</li>
+<li><strong>ATS optimization</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=nUlomY7RsIg" target="_blank" rel="noopener">&quot;Beat the ATS&quot;? They Lied | Ex-Google Recruiter Reveals the Resume Truth</a></li>
+<li><a href="https://www.youtube.com/watch?v=qW2YwaMbhxg" target="_blank" rel="noopener">How to beat the applicant tracking system in 2023 (UPDATED)</a></li>
+</ul>
+</li>
+<li><strong>Personalized cover letters</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=LCR72RnYat8" target="_blank" rel="noopener">Write a Cover Letter in SECONDS with Chat GPT 🤯</a></li>
+<li><a href="https://www.youtube.com/watch?v=a6QsGsk-JE0" target="_blank" rel="noopener">How to Write a Cover Letter with ChatGPT (with tested prompts!)</a></li>
+</ul>
+</li>
+<li><strong>LinkedIn profile optimization</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=7w3nbmUgyJs" target="_blank" rel="noopener">The Easiest Way to Optimize Your LinkedIn Profile with AI in 2026</a></li>
+<li><a href="https://www.youtube.com/watch?v=e7vxxhB5qyw" target="_blank" rel="noopener">How to Optimize Your LinkedIn Profile with AI in 2026 (4X More Views)</a></li>
+</ul>
+</li>
+<li><strong>Company and job research</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=drokzcSlej4" target="_blank" rel="noopener">Using AI to Research Companies Before an Interview</a></li>
+<li><a href="https://www.youtube.com/watch?v=UfyfzgpM_BU" target="_blank" rel="noopener">How to Analyze a Company Like an Insider Using AI</a></li>
+</ul>
+</li>
+<li><strong>Interview question generation</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=BSn5jdWhoGs" target="_blank" rel="noopener">AI Interview Preparation: Master Every Job Interview with ChatGPT &amp; Claude | Day 24</a></li>
+<li><a href="https://www.youtube.com/watch?v=tmJdy5F6L8Q" target="_blank" rel="noopener">7 ChatGPT Job Interview Prompts To Land Any Job</a></li>
+</ul>
+</li>
+<li><strong>Behavioral interview practice</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=2uM7gYuOvr4" target="_blank" rel="noopener">BEHAVIOURAL Interview Questions &amp; Answers! (The STAR Technique for Behavioral Interview Questions!)</a></li>
+<li><a href="https://www.youtube.com/watch?v=IV30jAw7dxA" target="_blank" rel="noopener">How to Answer Behavioral Interview Questions Sample Answers</a></li>
+</ul>
+</li>
+<li><strong>STAR method coaching</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=uQEuo7woEEk" target="_blank" rel="noopener">STAR INTERVIEW QUESTIONS &amp; ANSWERS! (The STAR TECHNIQUE for Behavioural Interview Questions!)</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZSSID5mp93o" target="_blank" rel="noopener">Answering Behavioral Interview Questions Using the STAR Method</a></li>
+</ul>
+</li>
+<li><strong>Salary negotiation practice</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=J30wmYgzVXM" target="_blank" rel="noopener">How to Negotiate Salary after Job Offer | 5 Practical Tips</a></li>
+<li><a href="https://www.youtube.com/watch?v=SjvS20YqUJ4" target="_blank" rel="noopener">How to Negotiate Salary After Job Offer | Show Your Value in a Counteroffer</a></li>
+</ul>
+</li>
+<li><strong>Follow-up email generation</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=EJWP7cNhZ2E" target="_blank" rel="noopener">INTERVIEW FOLLOW-UP EMAIL! (How to FOLLOW UP after a JOB INTERVIEW) EMAIL TEMPLATES INCLUDED!</a></li>
+<li><a href="https://www.youtube.com/watch?v=gSbV3q_MMbg" target="_blank" rel="noopener">Write a PERFECT Interview Thank You Email!</a></li>
+</ul>
+</li>
+<li><strong>Career planning and skill-gap analysis</strong><ul>
+<li><a href="https://www.youtube.com/watch?v=gtE553w5q7E" target="_blank" rel="noopener">How to Build a Capability Framework with AI: Skills Gap Analysis &amp; Learning Pathways | ELMO</a></li>
+<li><a href="https://www.youtube.com/watch?v=HPm8XAFCxAU" target="_blank" rel="noopener">Career Advisor Platform | AI-Powered Career Guidance Website 2025 | Full Demo &amp; Walkthrough</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="practice-activities">Practice Activities</h3>
+<ul>
+<li>Improve your resume using AI.</li>
+<li>Generate likely interview questions for a target role.</li>
+<li>Conduct a mock interview and refine your answers.</li>
+</ul>
+<h2 id="final-self-learning-project">Final Self-Learning Project</h2>
+<p>Create a complete AI-powered business solution relevant to your profession.</p>
+<h3 id="project-ideas">Project Ideas</h3>
+<ul>
+<li>Market research report</li>
+<li>Executive presentation</li>
+<li>Business proposal</li>
+<li>Marketing campaign</li>
+<li>Financial analysis</li>
+<li>HR hiring package</li>
+<li>Strategic planning document</li>
+<li>AI-assisted workflow automation</li>
+</ul>
+<h3 id="deliverables">Deliverables</h3>
+<ul>
+<li>Business problem definition</li>
+<li>AI workflow design</li>
+<li>AI-generated outputs</li>
+<li>Human review and refinement notes</li>
+<li>Final presentation or summary</li>
+<li>Lessons learned</li>
+</ul>
+<h2 id="recommended-software">Recommended Software</h2>
+<ul>
+<li>ChatGPT</li>
+<li>Claude</li>
+<li>Gemini</li>
+<li>Microsoft Copilot</li>
+<li>Perplexity</li>
+<li>NotebookLM</li>
+<li>Gamma</li>
+<li>Canva AI</li>
+<li>Notion AI</li>
+<li>Grammarly</li>
+<li>Fireflies.ai</li>
+<li>Otter.ai</li>
+<li>Microsoft Excel</li>
+<li>Microsoft PowerPoint</li>
+<li>Google Workspace</li>
+</ul>
+
+    </article>
+  </div>
+</div>
+<button class="back-top" aria-label="Back to top">&#8593;</button>
+<script>
+const links=[...document.querySelectorAll('.sidebar a[data-target]')];
+const map={};links.forEach(l=>map[l.dataset.target]=l);
+const heads=links.map(l=>document.getElementById(l.dataset.target)).filter(Boolean);
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){
+    links.forEach(l=>l.classList.remove('active'));
+    const a=map[e.target.id];if(a)a.classList.add('active');
+  }});
+},{rootMargin:'-10% 0px -75% 0px',threshold:0});
+heads.forEach(h=>obs.observe(h));
+
+// sidebar topic filter
+const search=document.querySelector('.search');
+search.addEventListener('input',()=>{
+  const q=search.value.toLowerCase();
+  links.forEach(l=>{l.parentElement.style.display=l.textContent.toLowerCase().includes(q)?'':'none';});
+});
+
+// mobile menu
+const sb=document.querySelector('.sidebar');const ov=document.querySelector('.overlay');
+const tg=document.querySelector('.menu-toggle');
+function close(){sb.classList.remove('open');ov.classList.remove('show');}
+tg.addEventListener('click',()=>{sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',close);
+links.forEach(l=>l.addEventListener('click',close));
+
+// back to top
+const bt=document.querySelector('.back-top');
+window.addEventListener('scroll',()=>{bt.classList.toggle('show',window.scrollY>500);});
+bt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
